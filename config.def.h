@@ -96,43 +96,42 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 0.9;
 
-/* Terminal colors (16 first used in escape sequence) */
+/*
+* base16-onedark-theme.h
+*
+* Base16: (https://github.com/chriskempson/base16)
+*
+* Authors:
+*
+* Scheme: Lalit Magant (http://github.com/tilal6991)
+* Template: Honza Pokorny <me@honza.ca>
+*
+*/
+
 static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#000000", /* black   */
-  [1] = "#ff5555", /* red     */
-  [2] = "#50fa7b", /* green   */
-  [3] = "#f1fa8c", /* yellow  */
-  [4] = "#bd93f9", /* blue    */
-  [5] = "#ff79c6", /* magenta */
-  [6] = "#8be9fd", /* cyan    */
-  [7] = "#bbbbbb", /* white   */
-
-  /* 8 bright colors */
-  [8]  = "#44475a", /* black   */
-  [9]  = "#ff5555", /* red     */
-  [10] = "#50fa7b", /* green   */
-  [11] = "#f1fa8c", /* yellow  */
-  [12] = "#bd93f9", /* blue    */
-  [13] = "#ff79c6", /* magenta */
-  [14] = "#8be9fd", /* cyan    */
-  [15] = "#ffffff", /* white   */
-
-  /* special colors */
-  [256] = "#282a36", /* background */
-  [257] = "#f8f8f2", /* foreground */
+  "#282c34", /* 0: black */
+  "#e06c75", /* 1: red */
+  "#98c379", /* 2: green */
+  "#d19a66", /* 3: yellow */
+  "#61afef", /* 4: blue */
+  "#c678dd", /* 5: magenta */
+  "#56b6c2", /* 6: cyan */
+  "#abb2bf", /* 7: white */
+  "#5c6370", /* 8: brblack */
+  "#e06c75", /* 9: brred */
+  "#98c379", /* 10: brgreen */
+  "#d19a66", /* 11: bryellow */
+  "#61afef", /* 12: brblue */
+  "#c678dd", /* 13: brmagenta */
+  "#56b6c2", /* 14: brcyan */
+  "#ffffff", /* 15: brwhite */
 };
 
 
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
-
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 0;
 /*
  * Default shape of cursor
  * 2: Block ("█")
